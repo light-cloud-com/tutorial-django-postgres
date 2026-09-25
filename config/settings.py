@@ -33,7 +33,9 @@ DEBUG = os.environ.get('DEBUG', 'false').lower() == 'true'
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 CSRF_TRUSTED_ORIGINS = [f'https://{host}' for host in ALLOWED_HOSTS]
 
-# Light Cloud ends HTTPS at the edge and forwards the original scheme in this header.
+# Light Cloud serves the site through its edge: the visitor's host name
+# arrives in X-Forwarded-Host and the original scheme in X-Forwarded-Proto.
+USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
