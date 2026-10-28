@@ -1,5 +1,7 @@
 # tutorial-django-postgres
 
+[![Deploy to Light Cloud](https://light-cloud.com/button.svg)](https://console.light-cloud.com/new?repo=https://github.com/light-cloud-com/tutorial-django-postgres)
+
 A small Django project used in the Light Cloud tutorial
 [Django + PostgreSQL: migrations, static files and a live admin](https://blog.light-cloud.com/tutorials/deploy-django-with-postgres).
 
